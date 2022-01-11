@@ -1,0 +1,185 @@
+/* css文件 */
+* {
+    margin: 0;      /* margin（外边距）属性定义元素周围的空间； */
+    padding: 0;     /* padding（填充）属性定义元素边框与元素内容之间的空间，即上下左右的内边距。*/
+    border: 0;      /* 边框属性 */
+}
+
+html,body {
+    height: 100%;
+}
+
+
+
+nav {
+    height: 50px;
+    background: #2deb08;
+}
+
+#content {
+    /* 该样式主要为博客正文文本框样式 */
+    height: 70%;
+    /* width: 100%; */
+
+    position: absolute;
+    top: 90px;
+    /*bottom: 30px;*/
+    left: 330px;;
+    right: 30px;
+
+    padding-top: 40px;               
+    padding-bottom: 40px;
+    padding-right: 60px;
+    padding-left: 60px;
+
+    overflow-y: scroll;             /* scroll滚动条 */
+    font-family: '宋体';
+    /*color:rgb(40, 117, 37); */
+    /*background: black;*/
+}
+
+
+/***************************************************************************/
+/*******************************顶部导航栏部分*******************************/
+/***************************************************************************/
+
+ul.main_nav_bar {
+    /* height: 60px; */
+    list-style-type: none;                /*移除列表前小标志*/
+    margin: 0;                            /* 删除边距和填充*/
+    padding: 0;
+    overflow: hidden;
+    /* border: 1px solid #00862dd3;    导航栏边框大小及颜色 */
+    background-color: rgb(40,117,37); /* #f3f3f3;    导航栏底色 */
+
+    text-align: center;
+    position: fixed;
+    top: 10px;
+    left: 100px;
+    right: 100px;
+}
+
+ul li a.homepage {
+    /* 第一个导航块 */
+    float: left;
+    display: block;
+    color: #1b0791;
+    text-align: center;/*让链接居中*/
+    padding: 14px 16px;    /* 单个导航块大小 */
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: #039e31;
+}
+
+ul li a.other_nav {
+    /* 其他导航块 */
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;/*让链接居中*/
+    padding: 14px 16px;    /* 单个导航块大小 */
+    text-decoration: none;
+}
+
+ul li a:hover:not(.active) {
+    /* 鼠标移到上面变色 */
+    background-color: rgb(2, 134, 46);    
+}
+
+
+
+/***************************************************************************/
+/*******************************左侧导航栏部分*******************************/
+/***************************************************************************/
+
+aside.main_left_aside {
+    /*height: 100px;*/
+    width: 300px;
+    position: fixed;          /* 定位方式：固定定位，相对于浏览器窗口 */
+    top: 145px;
+    bottom: 30px;
+    background: #262a30;         
+    overflow-y: scroll; /* 滚动条 */
+}
+
+
+/* 搜索框 */
+aside.main_left_aside input {
+    width: 235px;
+    height: 50px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    left: 0;
+    font-size: 14px;
+    background: #262a30;
+    text-indent: 20px;
+    outline: none;
+    color: #ffffff;
+    position: absolute;
+
+    /* 搜索框边框样式 */
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+
+    /* 搜索框固定 */
+    position: fixed;          /* 定位方式：固定定位，相对于浏览器窗口 */
+    top: 90px;
+}
+
+/* 搜索图标 */
+aside.main_left_aside #search i.fa.fa-search {
+    position: fixed;/*absolute找不到父对象*/
+    top: 90px;
+    left: 235px;
+    color: #757575;
+    font-size: 20px;
+    width: 48px;
+    height: 50px;
+    background: #262a30;
+    text-align: center;
+    line-height: 2.5;
+
+    border-style: solid;/*solid;点状边框*/
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+}
+
+
+
+/* 树目录位置 */
+aside.main_left_aside #tree {
+    padding-top: 55px
+}
+
+/* 树目录 */
+aside.main_left_aside ul {
+    padding: 0px 5px 5px 20px;
+}
+/* 数目录中每个文件名的边框样式 */
+aside.main_left_aside ul li {
+    list-style: none;
+    line-height: 25px;
+}
+aside.main_left_aside ul li a {
+    color: #999;
+    font-size: 14px;
+    text-decoration: none
+
+}
+aside.main_left_aside ul li a:hover {
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+    cursor:pointer;
+}
+aside.main_left_aside #tree .active a,
+aside.main_left_aside #tree .active a:hover {
+    color: #87daff;
+    border-bottom: 1px solid #87daff;
+}
+
+aside.main_left_aside #tree i.fa {
+    padding-right: 5px;
+}
+
